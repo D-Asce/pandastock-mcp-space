@@ -1,0 +1,7 @@
+# Hugging Face Space dependencies.
+# gradio[mcp] pulls a compatible `mcp` for the MCP integration (on HF's Linux
+# runtime this resolves cleanly; the Space does NOT use pandastocksdk's own
+# stdio MCPServer, only Gradio's MCP layer + PandaStock's NATS client).
+gradio[mcp]>=5.28.0
+# PandaStock client (PandaStock.__request_sync over NATS request/reply).
+nats-py==2.14.0
